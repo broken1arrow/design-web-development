@@ -3,64 +3,234 @@
     border: 0 none;
     margin: 0;
     padding: 0;
+    color: #111;
 }
 
-ol, ul {
+ol,
+ul {
     padding-left: 1.5em;
+
 }
 
 .hidden {
     display: none !important;
 }
 
-html, body {
+html,
+body {
     height: 100%;
+}
+
+.logo {
+    grid-area: image;
+    max-width: 100%;
+    padding: 5px;
 }
 
 /* Placement */
 
 body {
-    background-color: pink;
-    display: flex;
-    flex-direction: column;
+
+    background-image: url("/assets/img/body-backgrund.jpg");
+    background-image: url("/assets/img/main-background1.webp");
+    background-color: #131313ea;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /*   background-image: linear-gradient(250deg, rgba(90, 89, 89, 0.884), rgba(182, 182, 182, 0.897)); */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "main main main main main main main main main main main main"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+
 }
 
 .main {
-    flex: 1 0 auto;
+    grid-area: main;
 }
 
-.header, .footer {
-    flex: 0 0 auto;
+.main-grid {
+    display: grid;
+    padding-top: 1em;
+    grid-template-columns: repeat(12, 1fm auto);
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "text text text text text text . image image image image image"
+        "text text text text text text . image image image image image"
+    ;
+    box-shadow: 0px 0px 5px 5px #00000094;
+    background-color: #00000094;
+
+}
+
+.main-child-header h1 {
+    margin-top: 0.2em;
+    color: #000;
+
+}
+
+.main-child-header {
+    grid-area: header;
+    justify-self: center;
+
+}
+
+.main-child-text p {
+    font-size: 1.05em;
+    color: #e0e0e0;
+    margin-bottom: 0.2em;
+}
+
+.main-child-text {
+    grid-area: text;
+    margin-right: 0.2em;
+    margin-left: 0.3em;
+
+}
+
+
+
+.main-child-img {
+    grid-area: image;
+    margin-right: 0.2em;
+}
+
+.main-child-img p {
+    display: inline;
+    font-size: 1em;
+    color: #e0e0e0;
+    margin-left: 0.3em;
+
+
+}
+
+/* .header,
+.footer {
+  
+
 }
 
 /* Header */
 
-.header, .site-header {
-    display: flex;
-    justify-content: space-between;
+.header {
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "site-header site-header . . . navbar";
+
 }
+
+.site-header {
+    grid-area: site-header;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "image image image image title title";
+
+}
+
+
+.nav {
+    grid-area: navbar;
+
+}
+
+.nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px 5px #00000094;
+    background-color: #00000094;
+    border-radius: 5em;
+}
+
+
 
 /* Title */
 
-.title, .logo {
-    padding: 3em 3em 3em 0;
+.title,
+.logo {
+    padding: 1em 2em 1em 1em;
+
 }
 
+.nav-toggle {
+    grid-area: nav-toggle;
+
+}
+
+
 @media (max-width: 767px) {
-    .title, .logo {
+
+    /*   .title,
+    .logo {
         padding: 1em 1em 1em 0;
+    } */
+
+
+    .nav a {
+        margin-bottom: 1em;
+
     }
-    .title {
-        min-width: 50%;
+
+    .header {
+        grid-template-areas:
+            "site-header site-header site-header site-header . nav-toggle"
+            "site-header site-header site-header site-header  . navbar";
     }
+
+    .site-header {
+        grid-area: site-header;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "image image image image . ."
+            "title title title title title ."
+        ;
+    }
+
+    .nav:checked {
+        background-color: blue;
+
+    }
+
+    /* 
     .logo {
         max-width: 30%;
+
     }
+ */
+    .main-grid {
+        justify-content: stretch;
+        grid-template-columns: repeat(6, auto);
+        padding: 0em 0.2em 0.2em 0.2em;
+        grid-template-areas:
+            "header header header header header header"
+            "image image image image image image"
+            "text text text text text text"
+        ;
+        gap: 0.5em;
+
+    }
+
+    .main-child-img p {
+        margin-left: 0.0em;
+    }
+
 }
 
 .title * {
-    color: #111;
+    color: #ffffff;
+
 }
+
+
+.title {
+    grid-area: title;
+}
+
 
 .title p {
     font-style: italic;
@@ -69,14 +239,25 @@ body {
 /* Footer */
 
 .footer {
+    grid-area: footer;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #222;
+    box-shadow: 0px 0px 5px 5px #0000003f;
+    background-color: #00000048;
+    /* border-top: 1px solid #222; */
 }
 
 .footer a {
     color: #222;
 }
+
+.footer p {
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+    font-size: 0.95em;
+    color: #cccccc;
+}
+
 
 .footer .social {
     font-size: 2rem;
@@ -90,19 +271,33 @@ body {
     color: #444;
 }
 
-p, td, th, li, dd {
-    text-align: justify;
+
+p,
+td,
+th,
+li,
+dd {
+    text-align: left;
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
     margin-bottom: 0.6em;
     font-weight: bold;
+
 }
 
 img {
     max-width: 100%;
+    border-radius: 0.2em;
+    box-shadow: 0px 0px 4px 4px #38383859;
 }
 
 /* BELOW ARE PREPARED STYLES FOR CODE/PRE/BLOCKQUOTE, FEEL FREE TO REMOVE IT  */

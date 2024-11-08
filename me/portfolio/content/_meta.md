@@ -1,5 +1,5 @@
 ---
-Logo: assets/img/Image_of.webp
+Logo: /assets/img/possum-wearing-goggles.jpg
 Tagline: My portfolio.
 Social:
     - title: Link till sidans github repo.

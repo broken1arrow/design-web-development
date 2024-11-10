@@ -1,5 +1,5 @@
 ---
-Logo: /assets/img/possum-wearing-goggles.jpg
+Logo: /assets/img/cat.png
 Tagline: My portfolio.
 Social:
     - title: Link till sidans github repo.

@@ -23,7 +23,7 @@ Description: This is our index page.
          As I also need to learn other things and spend time to make git work (not an issue if you using Github Desktop, but it did not like the orginal path, as it colide with the school Github page) and also the page is broken on the school server. See if that could be fixed to sunday.  
       </p>
       <p>
-          Change the body to a grid pattern, to allow more control over the flow. It also created some negative effects I needed to solve when using mobile. As the hamburger was baked in to the site-header and dropdown using other logic.       
+          Change the body to a grid pattern, to allow more control over the flow. It also created some negative effects I needed to solve when using mobile. As the hamburger was baked in to the site-header and dropdown using other logic. 
       </p>
    </div>
    <div class="main-child-img">

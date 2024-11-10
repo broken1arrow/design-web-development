@@ -149,7 +149,7 @@ body {
 
 
 /* Title */
-
+ 
 .title,
 .logo {
     padding: 1em 2em 1em 1em;
@@ -158,7 +158,6 @@ body {
 
 .nav-toggle {
     grid-area: nav-toggle;
-
 }
 
 

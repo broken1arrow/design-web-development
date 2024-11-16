@@ -1,0 +1,19 @@
+.header {
+    grid-area: header;
+  
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "site-header site-header . . . navbar";
+  
+  }
+  
+  .site-header {
+    grid-area: site-header;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "image image image image title title";
+  
+  }
+  

@@ -1,0 +1,132 @@
+@import '../../node_modules/normalize.css/normalize';
+@import 'variables';
+
+@import 'blockquotes';
+@import 'code';
+@import 'mainarea.scss';
+@import 'headerm.scss';
+@import 'navbar.scss';
+@import 'footerp.scss';
+@import 'response.scss';
+
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+
+
+body {
+    background-image: url("/assets/img/main-background1.webp");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "main main main main main main main main main main main main"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    color: #444;
+    margin: 0.2em;
+
+}
+
+
+* {
+    color: $font-color;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: oblique;
+}
+
+* {
+    box-sizing: border-box;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    color: #111;
+}
+
+ol,
+ul {
+    padding-left: 1.5em;
+
+}
+
+.hidden {
+    display: none !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.logo {
+    grid-area: image;
+    max-width: 100%;
+    padding: 5px;
+}
+
+
+img {
+    max-width: 100%;
+    border-radius: 0.2em;
+    box-shadow: 0px 0px 4px 4px #38383859;
+}
+
+
+
+.title * {
+    color: #ffffff;
+
+}
+
+
+.title {
+    grid-area: title;
+}
+
+
+.title p {
+    font-style: italic;
+}
+
+
+.title,
+.logo {
+    padding: 1em 2em 1em 1em;
+
+}
+
+.nav-toggle {
+    grid-area: nav-toggle;
+}
+
+
+
+p,
+td,
+th,
+li,
+dd {
+    text-align: left;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    margin-bottom: 0.6em;
+    font-weight: bold;
+    font-family: "Merienda", cursive, sans-serif;
+
+}

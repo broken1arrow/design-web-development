@@ -1,0 +1,46 @@
+@media (max-width: 767px) {
+
+    .nav a {
+        margin-bottom: 1em;
+
+    }
+
+    .header {
+        grid-template-areas:
+            "site-header site-header site-header site-header . nav-toggle"
+            "site-header site-header site-header site-header  . navbar";
+    }
+
+    .site-header {
+        grid-area: site-header;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "image image image image . ."
+            "title title title title title ."
+        ;
+    }
+
+    .nav:checked {
+        background-color: blue;
+
+    }
+
+    .main-grid {
+        justify-content: stretch;
+        grid-template-columns: repeat(6, 1fm);
+        padding: 0em 0.2em 0.2em 0.2em;
+        grid-template-areas:
+            "header header header header header header"
+            "image image image image image image"
+            "text text text text text text"
+        ;
+        gap: 0.5em;
+
+    }
+
+    .main-child-img p {
+        margin-left: 0.0em;
+    }
+
+}

@@ -1,0 +1,26 @@
+/* Footer */
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px 5px #0000003f;
+    background-color: #00000048;
+    /* border-top: 1px solid #222; */
+}
+
+.footer a {
+    color: #222;
+}
+
+.footer p {
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+    font-size: 0.95em;
+    color: #cccccc;
+}
+
+
+.footer .social {
+    font-size: 2rem;
+}

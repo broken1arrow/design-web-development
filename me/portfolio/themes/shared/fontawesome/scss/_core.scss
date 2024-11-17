@@ -1,7 +1,9 @@
 // Base Class Definition
 // -------------------------
+@use "variables";
+@use "mixins";
 
-.#{$fa-css-prefix},
+.#{variables.$fa-css-prefix},
 .fas,
 .far,
 .fal,
@@ -16,6 +18,7 @@
   line-height: 1;
 }
 
+
 %fa-icon {
-  @include fa-icon;
+   @include mixins.fa-icon;
 }

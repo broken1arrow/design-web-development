@@ -1,25 +1,21 @@
-@import '../../node_modules/normalize.css/normalize';
-@import 'variables';
+@use '../../node_modules/normalize.css/normalize';
+@use 'variables';
 
-@import 'blockquotes';
-@import 'code';
-@import 'mainarea.scss';
-@import 'headerm.scss';
-@import 'navbar.scss';
-@import 'footerp.scss';
-@import 'response.scss';
+@use 'blockquotes';
+@use 'code';
+@use 'mainarea.scss';
+@use'headerm.scss';
+@use 'navbar.scss';
+@use 'footerp.scss';
+@use 'response.scss';
 
-@import '../../shared/fontawesome/scss/fontawesome';
-$fa-font-path: '../../shared/fontawesome/webfonts';
-@import '../../shared/fontawesome/scss/brands';
-@import '../../shared/fontawesome/scss/solid';
-@import '../../shared/fontawesome/scss/regular';
 
 
 body {
     background-image: url("/assets/img/main-background1.webp");
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-color: variables.$background-color;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
@@ -30,12 +26,16 @@ body {
     line-height: 1.5rem;
     color: #444;
     margin: 0.2em;
+ 
+    overflow: scroll;
 
 }
 
 
+
+
 * {
-    color: $font-color;
+    color: variables.$font-color;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-style: oblique;
@@ -73,7 +73,7 @@ body {
 
 img {
     max-width: 100%;
-    border-radius: 0.2em;
+    border-radius: 0.5em;
     box-shadow: 0px 0px 4px 4px #38383859;
 }
 

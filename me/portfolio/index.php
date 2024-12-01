@@ -15,7 +15,9 @@ $pico = new Pico(
     'plugins/', // plugins dir
     'themes/'   // themes dir
 );
-
+$pico->setConfig(array(
+    'session' => $_SESSION
+));
 // override configuration?
 //$pico->setConfig(array());
 

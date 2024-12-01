@@ -8,8 +8,9 @@
   },
   "scripts": {
       "lint": "stylelint \"**/*.scss\"",
-      "style-all": "npm run style && npm run style-mobile && npm run style-min",
+      "style-all": "npm run style && npm run style-mobile && npm run style-dark && npm run style-min",
       "style": "sass broken/scss/style.scss broken/css/style.css --no-source-map",
+      "style-dark": "sass broken/scss/style-dark.scss broken/css/style-dark.css --no-source-map",
       "style-mobile": "sass broken/scss/mobile-menu.scss broken/css/mobile-menu.css --no-source-map",
       "style-min": "sass shared/fontawesome/scss/fontawesome.scss shared/css/font-awsome.min.css --no-source-map --style compressed"
   },

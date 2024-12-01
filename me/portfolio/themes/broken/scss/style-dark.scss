@@ -1,5 +1,5 @@
 @use '../../node_modules/normalize.css/normalize';
-@use 'variables';
+@use 'variables-dark';
 
 @use 'blockquotes';
 @use 'code';
@@ -15,7 +15,7 @@ body {
     background-image: url("/assets/img/main-background1.webp");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: variables.$background-color;
+    background-color: variables-dark.$background-color;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
@@ -35,7 +35,7 @@ body {
 
 
 * {
-    color: variables.$font-color;
+    color: variables-dark.$font-color;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-style: oblique;
@@ -74,13 +74,13 @@ body {
 img {
     max-width: 100%;
     border-radius: 0.5em;
-    box-shadow: 0px 0px 4px 4px variables.$background-shadow-img;
+    box-shadow: 0px 0px 4px 4px variables-dark.$background-shadow-img;
 }
 
 
 
 .title * {
-    color: variables.$title-text;
+    color: variables-dark.$title-text;
 
 }
 
@@ -115,7 +115,7 @@ dd {
     text-align: left;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    color: variables.$p-text;
+    color: variables-dark.$p-text;
 }
 
 h1,

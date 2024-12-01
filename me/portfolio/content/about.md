@@ -36,10 +36,5 @@ Description: This is our index page.
       <p>Nu har inte GitHub någon unicode, så jag tog deras svg bild (som jag antar är liknande som i android där storlek kan mer dynamiskt ändras jämfört med vanlig bild). Skriver också med flit mycket text för att se så bilden hamnar i alla fall någolunda med texten. Men hade varit bättre om bilden mer flexibelt intergerar med texten, går säkert få detta mer dynamiskt. Ska ju pratas om detta senare i kursen. Om jag fattar det hela rätt. Flex var ju inte helt optimalt med nuvarande html setup. 
       </p>
    </div>
-<!--    <div class="main-child-img">
-      <img src="assets/img/writing_old.jpg"  alt="Image!!!!!">
-      <p>
-         Writing on paper. 
-      </p>
-   </div> -->
+
 </div>

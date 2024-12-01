@@ -48,8 +48,7 @@ Template: technologies
                 <h1></h1>
                 <p style="color: transparent">JavaScript är ett prototyp-baserat skriptspråk. JavaScript utgör tillsammans med HTML och CSS grunden
                     för webben. JavaScript är dynamiskt...</p>
-            </div>
--->
+            </div>-->
 
 
             <a href="./technologies/python_info.php" class="technologies-contents-item">
